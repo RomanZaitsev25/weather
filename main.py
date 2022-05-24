@@ -1,7 +1,6 @@
 import datetime
 
 import requests
-
 from config import open_weather_token
 
 
@@ -23,7 +22,7 @@ def get_weather(city, open_weather_token):
             f'&appid={open_weather_token}&units=metric'
         )
         data = r.json()
-        # print(data)
+        # pprint(data)
 
         city = data['name']
         cur_weather = data['main']['temp']
